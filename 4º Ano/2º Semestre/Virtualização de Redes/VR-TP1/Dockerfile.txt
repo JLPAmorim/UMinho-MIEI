@@ -1,0 +1,5 @@
+FROM centos:latest
+EXPOSE 80
+RUN yum -y install httpd
+VOLUME /usr/test
+ENTRYPOINT [“/usr/sbin/httpd”, ” -D”,” FOREGROUND”]

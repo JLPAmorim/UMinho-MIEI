@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project [
+	<!ELEMENT project (cabeçalho,equipa,abstract,deliverables)>
+	<!ELEMENT cabeçalho (keyname, title, subtitle?, begindate, enddate, supervisor)>
+	<!ELEMENT keyname (#PCDATA)>
+	<!ELEMENT title (#PCDATA)>
+	<!ELEMENT subtitle (#PCDATA)>
+	<!ELEMENT begindate (#PCDATA)>
+	<!ELEMENT enddate (#PCDATA)>
+	<!ELEMENT supervisor (texto,link)>	
+	<!ELEMENT equipa (membro+)>
+	<!ELEMENT membro (id,nome, mail, link?)>
+	<!ELEMENT nome (#PCDATA)>
+	<!ELEMENT id (#PCDATA)>
+	<!ELEMENT mail (#PCDATA)>
+	<!ELEMENT link (#PCDATA)>
+	<!ELEMENT abstract (paragrafo+)>
+	<!ELEMENT paragrafo (texto+)>
+	<!ELEMENT texto (#PCDATA|link|sublinhado|italico|bold)*>
+	<!ELEMENT deliverables (item+)>
+	<!ELEMENT item (texto,link)>
+	<!ELEMENT sublinhado (#PCDATA)>
+	<!ELEMENT italico (#PCDATA)>
+	<!ELEMENT bold (#PCDATA)>
+
+]>
+
+<project>
+	<cabecalho>
+		<keyname>TPC2-2020/2021</keyname>
+		<title>DTD para o Project Record</title>
+		<subtitle></subtitle>
+		<begindate>Outubro 2020</begindate>
+		<enddate>Outubro 2020</enddate>
+		<supervisor>
+			<texto>Jose Carlos Ramalho</texto>
+			<link>http://www4.di.uminho.pt/~jcr/</link>
+		</supervisor>
+	</cabecalho>
+	<equipa>
+		<membro>
+			<id>1</id>
+			<nome>João Luís Pereira Amorim</nome>
+			<mail>a74806@alunos.uminho.pt</mail>
+			<link></link>
+		</membro>
+	</equipa>
+	<abstract>
+		<paragrafo>
+			<texto>A document type definition (DTD) is a <sublinhado>set of markup 
+			 declarations </sublinhado>
+			 that define a document type for an SGML-family markup language <bold>(GML, 
+			 SGML, XML, HTML)</bold>. A DTD defines the valid building blocks of an XML 
+			 document. It defines the document structure with a list of validated 
+			 elements and attributes.</texto>
+		</paragrafo>
+		<paragrafo>
+			<texto>In the present project, the goal is to <italico>create a DTD about the 
+				Project Record</italico> in order to validate a XML file containing all the
+				elements about it.
+			</texto>
+		</paragrafo>
+		<paragrafo>
+			<texto>O DTD criado é caracterizado por <sublinhado>quatro elementos principais</sublinhado>, 
+				nomeadamente cabeçalho, equipa, abstract e deliverables.
+				No caso do <bold>cabeçalho</bold>, teremos o keyname, o title, o subtitle que é opcional, 
+				a begindate e a enddate, assim como o supervisor que é constituído por texto e um link.
+				No caso da equipa, esta será composta por uma lista de um ou mais membros em que cada
+				é composto por um <italico>id, um nome, um mail e um link opcional para esse mail</italico>.
+				Para o abstract, este será composto por um ou mais paragrafos, em que cada
+				é constituído por um ou mais elementos de texto, podendo este mesmo ser também um link, 
+				sublinhado, italico e bold. Por último, o <bold>deliverables</bold> que é composto por 
+				um ou mais items, sendo cada item composto por texto e um link.
+			</texto>
+		</paragrafo>
+	</abstract>
+	<deliverables>
+		<item>
+			<texto>DTD File</texto>
+			<link>https://www.w3schools.com/xml/xml_dtd_intro.asp</link>
+		</item>
+	</deliverables>
+</project>
+

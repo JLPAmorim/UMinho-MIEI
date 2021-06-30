@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3.w3-left Edit Student #{aluno.numero} 
+      .w3-container
+        form(action = `/students/`+ aluno.numero, method = "POST")
+                p Number:    
+                    br
+                    input.form-control(type="text",  name="numero", value = aluno.numero)
+                p Name: 
+                    br      
+                    input.form-control(type="text",  name="nome", value = aluno.nome)
+                p Github:  
+                    br    
+                    input.form-control(type="text",  name="git", value = aluno.git)
+                p TPCs:
+
+                table
+                    td 1    
+                        input.custom-control-input(type="checkbox", id=`tpc1`, name=`tpc1`)   
+                    td 2   
+                        input.custom-control-input(type="checkbox", id=`tpc2`, name=`tpc2`)     
+                    td 3   
+                        input.custom-control-input(type="checkbox", id=`tpc3`, name=`tpc3`)          
+                    td 4      
+                        input.custom-control-input(type="checkbox", id=`tpc4`, name=`tpc4`)        
+                    td 5    
+                        input.custom-control-input(type="checkbox", id=`tpc5`, name=`tpc5`)       
+                    td 6   
+                        input.custom-control-input(type="checkbox", id=`tpc6`, name=`tpc6`)      
+                    td 7   
+                        input.custom-control-input(type="checkbox", id=`tpc7`, name=`tpc7`)           
+                    td 8   
+                        input.custom-control-input(type="checkbox", id=`tpc8`, name=`tpc8`)  
+                    
+                br
+                input(value='Submit', type='submit')
+            
+      footer.w3-container.w3-teal
+        address Gerado por dawApp :: 2020-Nov, Joao Amorim
+        p
+            a(href="/students") Back to Main Page

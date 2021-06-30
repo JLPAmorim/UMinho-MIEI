@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/joao_/OneDrive/Ambiente%20de%20Trabalho/DAW2020/pr.dtd">
+<pr>
+    <meta>
+        <key>MIEI_DAW20/21_TPC4</key>
+        <title>Arqueossitios do NW Português</title>
+        <bdate>04/11/2020</bdate>
+        <edate>11/11/2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="A74806">
+            <name>João Amorim</name>
+            <email>a74806@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Neste TPC era pedido, tal como no anterior, que fosse criado um ficheiro XSLT capaz de 
+        gerar um ficheiro HTML para cada Arqueossítio, em que os nomes deveriam corresponder a 
+        arqx.html, sendo x o número correspondente à ordem pela qual os mesmos aparecem no ficheiro 
+        XML fornecido, assim como uma pagína principal contendo os indices dos mesmos.
+        Depois de criados todos os ficheiros era também necessária a criação de um servidor utilizando
+        Node.js que permitisse dar respostaa pedidos dos tipo localhost:xxxx/arq/x em que xxxx corresponde
+        à porta e x corresponde novamente ao Arqueossítio.
+        </p>
+        <p> Uma vez que a geração dos ficheiros já tinha sido quase totalmente feita no TPC anterior, tendo 
+            apenas que garantir a criação dos mesmos com os nomes apropriados, a dificuldade esteve na 
+            criação do Servidor.
+        </p>
+        <p> Para o Servidor, era necessário receber o pedido do utilizador e tratá-lo. Para isso foi usada
+            a função split, guardando cada campo separado por "/" num array, campos esses que viriam a ser 
+            usados na declaração da função ReadFile. Um cuidado a ter seria na diferença entre pedidos de
+            localhost:7777/arq e localhost:7777/arq7/x uma vez que era preciso garantir que o primeiro enviaria
+            o utilizador para a página principal contendo os indices e o segundo para cada uma das páginas dos
+            Arqueossítios. Para isto apenas foi preciso garantir que a variável que corresponderia ao array 
+            resultante do split teria apenas 2 campos para o primeiro e 3 para o segundo caso.
+        </p>
+        <p> De notar que é possível ir da página principal dos indices para qualquer um dos arqueossitios
+          assim como regressar à página com os indices. Este último caso foi resolvido com o recurso à tag <a>
+           com href = "javascript:history.back().
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="">Node.js Server</link>
+        <link url="">XML DTD</link>
+        <link url="">XML Document</link>
+        <link url="">XSLT Stylesheet</link>
+    </deliverables>
+</pr>

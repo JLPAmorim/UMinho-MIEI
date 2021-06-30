@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    .w3-card-4
+        header.w3-container.w3-teal
+            h3 Student Information: #{aluno.numero}
+        .w3-container
+            table.w3-table-all.w3-section
+                tr
+                    th Name
+                        td=aluno.nome
+                tr
+                    th Number
+                        td=aluno.numero
+                tr
+                    th Git
+                        td
+                            a(href=aluno.git)= aluno.git
+                tr  
+                    th TPC
+                        td 
+                            ul
+                                - var n = 1;
+                                - var arr = aluno.tpc
+                                each c in aluno.tpc
+                                    li
+                                       b TPC  #{n++}: #{arr[n-2]}
+              
+    .w3-container.w3-teal
+            footer.w3-container
+                address Gerado por dawApp :: 2020-Nov, Joao Amorim
+                p
+                    a(href="/students") Back to Main Page

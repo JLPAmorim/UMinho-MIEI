@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/joao_/OneDrive/Ambiente%20de%20Trabalho/DAW2020/pr.dtd">
+<pr>
+    <meta>
+        <key>MIEI_DAW20/21_TPC8</key>
+        <title>FileApp</title>
+        <bdate>01/11/2020</bdate>
+        <edate>09/12/2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="A74806">
+            <name>João Amorim</name>
+            <email>a74806@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Neste TPC era pedido que fosse finalizada a aplicação de Upload e Download de ficheiros, no sentido 
+            de que a mesma permitisse realizar múltiplos uploads ao mesmo tempo.
+        </p> 
+        <p>Ao tentar submeter ficheiros, se o utilizador carregar em "Upload More", aparece então um novo formulário
+        para submeter o número de ficheiros pretendidos.
+        </p>
+
+ 
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/Lynqen/DAW2020/tree/main/T8/fileApp">FileApp</link>
+        <link url="https://github.com/Lynqen/DAW2020/blob/main/T7/PR%20-%20TPC8.xml">Project Record</link>
+    </deliverables>
+</pr>

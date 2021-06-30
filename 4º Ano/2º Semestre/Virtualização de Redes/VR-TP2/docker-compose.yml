@@ -1,0 +1,63 @@
+version: '3'
+services:
+  db_user:
+    image: mongo:latest
+    restart: always
+    container_name: db_user
+    volumes:
+      - data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - dbuser_net
+
+  auth:
+    image: jlpamorim/jwt-auth
+    container_name: auth
+    ports:
+      - '8002:8002'
+    networks:
+      - dbuser_net
+      - auth_net
+
+  app:
+    image: jlpamorim/http-app
+    container_name: app
+    ports:
+      - '8003:8003'
+    networks:
+      - auth_net
+      - serv_net
+
+  files:
+    image: jlpamorim/http-files
+    container_name: files
+    restart: always
+    ports:
+      - '8001:8001'
+    networks:
+      - dbfile_net
+      - serv_net
+
+  db_file:
+    image: mongo:latest
+    restart: always
+    container_name: db_file
+    volumes:
+      - data:/data/db
+    ports:
+      - "27018:27017"
+    networks:
+      - dbfile_net
+
+volumes:
+  data: 
+networks:
+  dbuser_net:
+    driver: bridge
+  dbfile_net:
+    driver: bridge
+  auth_net:
+    driver: bridge
+  serv_net:
+    driver: bridge

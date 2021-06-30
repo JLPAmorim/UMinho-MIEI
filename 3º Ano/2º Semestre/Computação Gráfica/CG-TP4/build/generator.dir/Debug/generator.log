@@ -1,0 +1,31 @@
+﻿  Building Custom Rule C:/Users/jlp_a/Desktop/CG-TP4/CMakeLists.txt
+  generator.cpp
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(183,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(269,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(270,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(324,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(410,23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(411,23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(515,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(551,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(630,19): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(632,62): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(632,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(632,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(632,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(634,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(634,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(634,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(634,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(636,50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(636,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(636,20): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(638,67): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(638,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(638,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(638,22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(640,64): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(640,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(640,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jlp_a\Desktop\CG-TP4\Generator\generator.cpp(640,19): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  generator.vcxproj -> C:\Users\jlp_a\Desktop\CG-TP4\build\Debug\generator.exe

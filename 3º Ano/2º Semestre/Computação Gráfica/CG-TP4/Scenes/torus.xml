@@ -1,0 +1,14 @@
+<scene> 
+	<lights>
+        <light type="POINT" posX=0.0 posY=0.0 posZ=0.0/>
+    </lights>
+    <!--SOL-->
+    <group>
+        <translate X="0.0" Y="0.0" Z="0.0" />
+        <rotate time="45" axisX="0" axisY="1" axisZ="0" />
+        <scale X="1.5" Y="1.5" Z="1.5" />
+        <models>
+            <model file="torus.3d" textura="texture_mercury.jpg" />
+        </models>
+    </group>
+</scene>

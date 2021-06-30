@@ -1,0 +1,10 @@
+^C:\USERS\JLP_A\DESKTOP\CG\CG-TP1\BUILD\CMAKEFILES\C1B90B991EBE2EF734F2DC04F463F3DC\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jlp_a/Desktop/CG/CG-TP1 -BC:/Users/jlp_a/Desktop/CG/CG-TP1/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/jlp_a/Desktop/CG/CG-TP1/build/CG-TP1.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

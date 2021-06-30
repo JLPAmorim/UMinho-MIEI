@@ -1,0 +1,854 @@
+                                                                                                                                                            
+┌──(root💀kali)-[/home/kali]
+└─# nmap -sS 192.168.12.1/24                                                                                               
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-25 09:38 EST
+Nmap scan report for 192.168.12.127
+Host is up (0.00025s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+25/tcp   open  smtp
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+MAC Address: 00:0C:29:8E:4E:C1 (VMware)
+
+Nmap scan report for 192.168.12.128
+Host is up (0.015s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2049/tcp open  nfs
+MAC Address: 00:0C:29:CE:39:B3 (VMware)
+
+Nmap scan report for 192.168.12.254
+Host is up (0.000065s latency).
+All 1000 scanned ports on 192.168.12.254 are filtered
+MAC Address: 00:50:56:FE:9D:35 (VMware)
+
+Nmap scan report for 192.168.12.129
+Host is up (0.0000030s latency).
+All 1000 scanned ports on 192.168.12.129 are closed
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 45.83 seconds
+                                                                                                                                                            
+┌──(root💀kali)-[/home/kali]
+└─# nmap -n -sV 192.168.12.1/24
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-25 09:40 EST
+Nmap scan report for 192.168.12.127
+Host is up (0.00073s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          FileZilla ftpd 0.9.32 beta
+25/tcp   open  smtp         SLmail smtpd 5.5.0.4433
+80/tcp   open  http         Apache httpd 2.2.12 ((Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0)
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+443/tcp  open  ssl/https?
+445/tcp  open  microsoft-ds Microsoft Windows XP microsoft-ds
+3306/tcp open  mysql?
+MAC Address: 00:0C:29:8E:4E:C1 (VMware)
+Service Info: Host: tester-595cbae8; OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Nmap scan report for 192.168.12.128
+Host is up (0.017s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 5.1p1 Debian 3ubuntu1 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http        Apache httpd 2.2.9 ((Ubuntu) PHP/5.2.6-2ubuntu4.6 with Suhosin-Patch)
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+2049/tcp open  nfs         2-4 (RPC #100003)
+MAC Address: 00:0C:29:CE:39:B3 (VMware)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.12.254
+Host is up (0.00012s latency).
+All 1000 scanned ports on 192.168.12.254 are filtered
+MAC Address: 00:50:56:FE:9D:35 (VMware)
+
+Nmap scan report for 192.168.12.129
+Host is up (0.0000020s latency).
+All 1000 scanned ports on 192.168.12.129 are closed
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (4 hosts up) scanned in 172.75 seconds
+                                                                                                                                                            
+┌──(root💀kali)-[/home/kali]
+└─# nmap -A -T4 192.168.12.1/24
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-25 09:43 EST
+Nmap scan report for 192.168.12.127
+Host is up (0.00028s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          FileZilla ftpd 0.9.32 beta
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x 1 ftp ftp              0 Aug 06  2009 incoming
+|_-r--r--r-- 1 ftp ftp            187 Aug 06  2009 onefile.html
+|_ftp-bounce: bounce working!
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+25/tcp   open  smtp         SLmail smtpd 5.5.0.4433
+| smtp-commands: tester-595cbae8, SIZE 100000000, SEND, SOML, SAML, HELP, VRFY, EXPN, ETRN, XTRN, 
+|_ This server supports the following commands. HELO MAIL RCPT DATA RSET SEND SOML SAML HELP NOOP QUIT 
+80/tcp   open  http         Apache httpd 2.2.12 ((Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0)
+|_http-server-header: Apache/2.2.12 (Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0
+| http-title:             XAMPP            1.7.2        
+|_Requested resource was http://192.168.12.127/xampp/splash.php
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+443/tcp  open  ssl/https?
+| ssl-cert: Subject: commonName=localhost
+| Not valid before: 2009-04-15T22:04:42
+|_Not valid after:  2019-04-13T22:04:42
+|_ssl-date: 2021-01-25T14:48:11+00:00; 0s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+445/tcp  open  microsoft-ds Windows XP microsoft-ds
+3306/tcp open  mysql?
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+MAC Address: 00:0C:29:8E:4E:C1 (VMware)
+Device type: general purpose
+Running: Microsoft Windows XP
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_xp::sp3
+OS details: Microsoft Windows XP SP2 or SP3
+Network Distance: 1 hop
+Service Info: Host: tester-595cbae8; OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: 5s, deviation: 9s, median: 0s
+|_nbstat: NetBIOS name: TESTER-595CBAE8, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:8e:4e:c1 (VMware)
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: tester-595cbae8
+|   NetBIOS computer name: TESTER-595CBAE8\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-01-25T14:47:21+00:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.28 ms 192.168.12.127
+
+Nmap scan report for 192.168.12.128
+Host is up (0.0019s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.12.129
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         OpenSSH 5.1p1 Debian 3ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 04:a9:f7:e1:ce:66:8c:95:ce:cd:dc:84:e2:ff:22:2c (DSA)
+|_  2048 ab:d7:b0:df:21:ab:5c:24:8b:92:fe:b2:4f:ef:9c:21 (RSA)
+80/tcp   open  http        Apache httpd 2.2.9 ((Ubuntu) PHP/5.2.6-2ubuntu4.6 with Suhosin-Patch)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.9 (Ubuntu) PHP/5.2.6-2ubuntu4.6 with Suhosin-Patch
+|_http-title: Site doesn't have a title (text/html).
+111/tcp  open  rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100005  1,2,3      36881/tcp   mountd
+|   100005  1,2,3      50230/udp   mountd
+|   100021  1,3,4      48476/udp   nlockmgr
+|   100021  1,3,4      55602/tcp   nlockmgr
+|   100024  1          34920/udp   status
+|_  100024  1          44687/tcp   status
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+2049/tcp open  nfs         2-4 (RPC #100003)
+MAC Address: 00:0C:29:CE:39:B3 (VMware)
+Device type: general purpose|storage-misc
+Running: Linux 2.6.X, Thecus embedded
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/h:thecus:4200 cpe:/h:thecus:n5500
+OS details: Linux 2.6.18 - 2.6.31, Thecus 4200 or N5500 NAS device (Linux 2.6.33)
+Network Distance: 1 hop
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_nbstat: NetBIOS name: UBUNTU, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.94 ms 192.168.12.128
+
+Nmap scan report for 192.168.12.254
+Host is up (0.00011s latency).
+All 1000 scanned ports on 192.168.12.254 are filtered
+MAC Address: 00:50:56:FE:9D:35 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.11 ms 192.168.12.254
+
+Nmap scan report for 192.168.12.129
+Host is up (0.000042s latency).
+All 1000 scanned ports on 192.168.12.129 are closed
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+Post-scan script results:
+| clock-skew: 
+|   0s: 
+|     192.168.12.128
+|_    192.168.12.127
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (4 hosts up) scanned in 286.06 seconds
+                                                                                                                                                            
+┌──(root💀kali)-[/home/kali]
+└─# nmap -O 192.168.12.1/24                                                                                                    
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-25 09:49 EST
+Nmap scan report for 192.168.12.127
+Host is up (0.00028s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+25/tcp   open  smtp
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+MAC Address: 00:0C:29:8E:4E:C1 (VMware)
+Device type: general purpose
+Running: Microsoft Windows XP
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_xp::sp3
+OS details: Microsoft Windows XP SP2 or SP3
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.12.128
+Host is up (0.0015s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2049/tcp open  nfs
+MAC Address: 00:0C:29:CE:39:B3 (VMware)
+Device type: general purpose|storage-misc
+Running: Linux 2.6.X, Thecus embedded
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/h:thecus:4200 cpe:/h:thecus:n5500
+OS details: Linux 2.6.18 - 2.6.31, Thecus 4200 or N5500 NAS device (Linux 2.6.33)
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.12.254
+Host is up (0.00013s latency).
+All 1000 scanned ports on 192.168.12.254 are filtered
+MAC Address: 00:50:56:FE:9D:35 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.12.129
+Host is up (0.000040s latency).
+All 1000 scanned ports on 192.168.12.129 are closed
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (4 hosts up) scanned in 41.92 seconds
+                                                                                                                                                            
+┌──(root💀kali)-[/home/kali]
+└─# nmap -v -O 192.168.12.1/24
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-25 09:50 EST
+Initiating ARP Ping Scan at 09:50
+Scanning 255 hosts [1 port/host]
+Completed ARP Ping Scan at 09:51, 4.08s elapsed (255 total hosts)
+Initiating Parallel DNS resolution of 3 hosts. at 09:51
+Completed Parallel DNS resolution of 3 hosts. at 09:51, 13.00s elapsed
+Nmap scan report for 192.168.12.0 [host down]
+Nmap scan report for 192.168.12.1 [host down]
+Nmap scan report for 192.168.12.2 [host down]
+Nmap scan report for 192.168.12.3 [host down]
+Nmap scan report for 192.168.12.4 [host down]
+Nmap scan report for 192.168.12.5 [host down]
+Nmap scan report for 192.168.12.6 [host down]
+Nmap scan report for 192.168.12.7 [host down]
+Nmap scan report for 192.168.12.8 [host down]
+Nmap scan report for 192.168.12.9 [host down]
+Nmap scan report for 192.168.12.10 [host down]
+Nmap scan report for 192.168.12.11 [host down]
+Nmap scan report for 192.168.12.12 [host down]
+Nmap scan report for 192.168.12.13 [host down]
+Nmap scan report for 192.168.12.14 [host down]
+Nmap scan report for 192.168.12.15 [host down]
+Nmap scan report for 192.168.12.16 [host down]
+Nmap scan report for 192.168.12.17 [host down]
+Nmap scan report for 192.168.12.18 [host down]
+Nmap scan report for 192.168.12.19 [host down]
+Nmap scan report for 192.168.12.20 [host down]
+Nmap scan report for 192.168.12.21 [host down]
+Nmap scan report for 192.168.12.22 [host down]
+Nmap scan report for 192.168.12.23 [host down]
+Nmap scan report for 192.168.12.24 [host down]
+Nmap scan report for 192.168.12.25 [host down]
+Nmap scan report for 192.168.12.26 [host down]
+Nmap scan report for 192.168.12.27 [host down]
+Nmap scan report for 192.168.12.28 [host down]
+Nmap scan report for 192.168.12.29 [host down]
+Nmap scan report for 192.168.12.30 [host down]
+Nmap scan report for 192.168.12.31 [host down]
+Nmap scan report for 192.168.12.32 [host down]
+Nmap scan report for 192.168.12.33 [host down]
+Nmap scan report for 192.168.12.34 [host down]
+Nmap scan report for 192.168.12.35 [host down]
+Nmap scan report for 192.168.12.36 [host down]
+Nmap scan report for 192.168.12.37 [host down]
+Nmap scan report for 192.168.12.38 [host down]
+Nmap scan report for 192.168.12.39 [host down]
+Nmap scan report for 192.168.12.40 [host down]
+Nmap scan report for 192.168.12.41 [host down]
+Nmap scan report for 192.168.12.42 [host down]
+Nmap scan report for 192.168.12.43 [host down]
+Nmap scan report for 192.168.12.44 [host down]
+Nmap scan report for 192.168.12.45 [host down]
+Nmap scan report for 192.168.12.46 [host down]
+Nmap scan report for 192.168.12.47 [host down]
+Nmap scan report for 192.168.12.48 [host down]
+Nmap scan report for 192.168.12.49 [host down]
+Nmap scan report for 192.168.12.50 [host down]
+Nmap scan report for 192.168.12.51 [host down]
+Nmap scan report for 192.168.12.52 [host down]
+Nmap scan report for 192.168.12.53 [host down]
+Nmap scan report for 192.168.12.54 [host down]
+Nmap scan report for 192.168.12.55 [host down]
+Nmap scan report for 192.168.12.56 [host down]
+Nmap scan report for 192.168.12.57 [host down]
+Nmap scan report for 192.168.12.58 [host down]
+Nmap scan report for 192.168.12.59 [host down]
+Nmap scan report for 192.168.12.60 [host down]
+Nmap scan report for 192.168.12.61 [host down]
+Nmap scan report for 192.168.12.62 [host down]
+Nmap scan report for 192.168.12.63 [host down]
+Nmap scan report for 192.168.12.64 [host down]
+Nmap scan report for 192.168.12.65 [host down]
+Nmap scan report for 192.168.12.66 [host down]
+Nmap scan report for 192.168.12.67 [host down]
+Nmap scan report for 192.168.12.68 [host down]
+Nmap scan report for 192.168.12.69 [host down]
+Nmap scan report for 192.168.12.70 [host down]
+Nmap scan report for 192.168.12.71 [host down]
+Nmap scan report for 192.168.12.72 [host down]
+Nmap scan report for 192.168.12.73 [host down]
+Nmap scan report for 192.168.12.74 [host down]
+Nmap scan report for 192.168.12.75 [host down]
+Nmap scan report for 192.168.12.76 [host down]
+Nmap scan report for 192.168.12.77 [host down]
+Nmap scan report for 192.168.12.78 [host down]
+Nmap scan report for 192.168.12.79 [host down]
+Nmap scan report for 192.168.12.80 [host down]
+Nmap scan report for 192.168.12.81 [host down]
+Nmap scan report for 192.168.12.82 [host down]
+Nmap scan report for 192.168.12.83 [host down]
+Nmap scan report for 192.168.12.84 [host down]
+Nmap scan report for 192.168.12.85 [host down]
+Nmap scan report for 192.168.12.86 [host down]
+Nmap scan report for 192.168.12.87 [host down]
+Nmap scan report for 192.168.12.88 [host down]
+Nmap scan report for 192.168.12.89 [host down]
+Nmap scan report for 192.168.12.90 [host down]
+Nmap scan report for 192.168.12.91 [host down]
+Nmap scan report for 192.168.12.92 [host down]
+Nmap scan report for 192.168.12.93 [host down]
+Nmap scan report for 192.168.12.94 [host down]
+Nmap scan report for 192.168.12.95 [host down]
+Nmap scan report for 192.168.12.96 [host down]
+Nmap scan report for 192.168.12.97 [host down]
+Nmap scan report for 192.168.12.98 [host down]
+Nmap scan report for 192.168.12.99 [host down]
+Nmap scan report for 192.168.12.100 [host down]
+Nmap scan report for 192.168.12.101 [host down]
+Nmap scan report for 192.168.12.102 [host down]
+Nmap scan report for 192.168.12.103 [host down]
+Nmap scan report for 192.168.12.104 [host down]
+Nmap scan report for 192.168.12.105 [host down]
+Nmap scan report for 192.168.12.106 [host down]
+Nmap scan report for 192.168.12.107 [host down]
+Nmap scan report for 192.168.12.108 [host down]
+Nmap scan report for 192.168.12.109 [host down]
+Nmap scan report for 192.168.12.110 [host down]
+Nmap scan report for 192.168.12.111 [host down]
+Nmap scan report for 192.168.12.112 [host down]
+Nmap scan report for 192.168.12.113 [host down]
+Nmap scan report for 192.168.12.114 [host down]
+Nmap scan report for 192.168.12.115 [host down]
+Nmap scan report for 192.168.12.116 [host down]
+Nmap scan report for 192.168.12.117 [host down]
+Nmap scan report for 192.168.12.118 [host down]
+Nmap scan report for 192.168.12.119 [host down]
+Nmap scan report for 192.168.12.120 [host down]
+Nmap scan report for 192.168.12.121 [host down]
+Nmap scan report for 192.168.12.122 [host down]
+Nmap scan report for 192.168.12.123 [host down]
+Nmap scan report for 192.168.12.124 [host down]
+Nmap scan report for 192.168.12.125 [host down]
+Nmap scan report for 192.168.12.126 [host down]
+Nmap scan report for 192.168.12.130 [host down]
+Nmap scan report for 192.168.12.131 [host down]
+Nmap scan report for 192.168.12.132 [host down]
+Nmap scan report for 192.168.12.133 [host down]
+Nmap scan report for 192.168.12.134 [host down]
+Nmap scan report for 192.168.12.135 [host down]
+Nmap scan report for 192.168.12.136 [host down]
+Nmap scan report for 192.168.12.137 [host down]
+Nmap scan report for 192.168.12.138 [host down]
+Nmap scan report for 192.168.12.139 [host down]
+Nmap scan report for 192.168.12.140 [host down]
+Nmap scan report for 192.168.12.141 [host down]
+Nmap scan report for 192.168.12.142 [host down]
+Nmap scan report for 192.168.12.143 [host down]
+Nmap scan report for 192.168.12.144 [host down]
+Nmap scan report for 192.168.12.145 [host down]
+Nmap scan report for 192.168.12.146 [host down]
+Nmap scan report for 192.168.12.147 [host down]
+Nmap scan report for 192.168.12.148 [host down]
+Nmap scan report for 192.168.12.149 [host down]
+Nmap scan report for 192.168.12.150 [host down]
+Nmap scan report for 192.168.12.151 [host down]
+Nmap scan report for 192.168.12.152 [host down]
+Nmap scan report for 192.168.12.153 [host down]
+Nmap scan report for 192.168.12.154 [host down]
+Nmap scan report for 192.168.12.155 [host down]
+Nmap scan report for 192.168.12.156 [host down]
+Nmap scan report for 192.168.12.157 [host down]
+Nmap scan report for 192.168.12.158 [host down]
+Nmap scan report for 192.168.12.159 [host down]
+Nmap scan report for 192.168.12.160 [host down]
+Nmap scan report for 192.168.12.161 [host down]
+Nmap scan report for 192.168.12.162 [host down]
+Nmap scan report for 192.168.12.163 [host down]
+Nmap scan report for 192.168.12.164 [host down]
+Nmap scan report for 192.168.12.165 [host down]
+Nmap scan report for 192.168.12.166 [host down]
+Nmap scan report for 192.168.12.167 [host down]
+Nmap scan report for 192.168.12.168 [host down]
+Nmap scan report for 192.168.12.169 [host down]
+Nmap scan report for 192.168.12.170 [host down]
+Nmap scan report for 192.168.12.171 [host down]
+Nmap scan report for 192.168.12.172 [host down]
+Nmap scan report for 192.168.12.173 [host down]
+Nmap scan report for 192.168.12.174 [host down]
+Nmap scan report for 192.168.12.175 [host down]
+Nmap scan report for 192.168.12.176 [host down]
+Nmap scan report for 192.168.12.177 [host down]
+Nmap scan report for 192.168.12.178 [host down]
+Nmap scan report for 192.168.12.179 [host down]
+Nmap scan report for 192.168.12.180 [host down]
+Nmap scan report for 192.168.12.181 [host down]
+Nmap scan report for 192.168.12.182 [host down]
+Nmap scan report for 192.168.12.183 [host down]
+Nmap scan report for 192.168.12.184 [host down]
+Nmap scan report for 192.168.12.185 [host down]
+Nmap scan report for 192.168.12.186 [host down]
+Nmap scan report for 192.168.12.187 [host down]
+Nmap scan report for 192.168.12.188 [host down]
+Nmap scan report for 192.168.12.189 [host down]
+Nmap scan report for 192.168.12.190 [host down]
+Nmap scan report for 192.168.12.191 [host down]
+Nmap scan report for 192.168.12.192 [host down]
+Nmap scan report for 192.168.12.193 [host down]
+Nmap scan report for 192.168.12.194 [host down]
+Nmap scan report for 192.168.12.195 [host down]
+Nmap scan report for 192.168.12.196 [host down]
+Nmap scan report for 192.168.12.197 [host down]
+Nmap scan report for 192.168.12.198 [host down]
+Nmap scan report for 192.168.12.199 [host down]
+Nmap scan report for 192.168.12.200 [host down]
+Nmap scan report for 192.168.12.201 [host down]
+Nmap scan report for 192.168.12.202 [host down]
+Nmap scan report for 192.168.12.203 [host down]
+Nmap scan report for 192.168.12.204 [host down]
+Nmap scan report for 192.168.12.205 [host down]
+Nmap scan report for 192.168.12.206 [host down]
+Nmap scan report for 192.168.12.207 [host down]
+Nmap scan report for 192.168.12.208 [host down]
+Nmap scan report for 192.168.12.209 [host down]
+Nmap scan report for 192.168.12.210 [host down]
+Nmap scan report for 192.168.12.211 [host down]
+Nmap scan report for 192.168.12.212 [host down]
+Nmap scan report for 192.168.12.213 [host down]
+Nmap scan report for 192.168.12.214 [host down]
+Nmap scan report for 192.168.12.215 [host down]
+Nmap scan report for 192.168.12.216 [host down]
+Nmap scan report for 192.168.12.217 [host down]
+Nmap scan report for 192.168.12.218 [host down]
+Nmap scan report for 192.168.12.219 [host down]
+Nmap scan report for 192.168.12.220 [host down]
+Nmap scan report for 192.168.12.221 [host down]
+Nmap scan report for 192.168.12.222 [host down]
+Nmap scan report for 192.168.12.223 [host down]
+Nmap scan report for 192.168.12.224 [host down]
+Nmap scan report for 192.168.12.225 [host down]
+Nmap scan report for 192.168.12.226 [host down]
+Nmap scan report for 192.168.12.227 [host down]
+Nmap scan report for 192.168.12.228 [host down]
+Nmap scan report for 192.168.12.229 [host down]
+Nmap scan report for 192.168.12.230 [host down]
+Nmap scan report for 192.168.12.231 [host down]
+Nmap scan report for 192.168.12.232 [host down]
+Nmap scan report for 192.168.12.233 [host down]
+Nmap scan report for 192.168.12.234 [host down]
+Nmap scan report for 192.168.12.235 [host down]
+Nmap scan report for 192.168.12.236 [host down]
+Nmap scan report for 192.168.12.237 [host down]
+Nmap scan report for 192.168.12.238 [host down]
+Nmap scan report for 192.168.12.239 [host down]
+Nmap scan report for 192.168.12.240 [host down]
+Nmap scan report for 192.168.12.241 [host down]
+Nmap scan report for 192.168.12.242 [host down]
+Nmap scan report for 192.168.12.243 [host down]
+Nmap scan report for 192.168.12.244 [host down]
+Nmap scan report for 192.168.12.245 [host down]
+Nmap scan report for 192.168.12.246 [host down]
+Nmap scan report for 192.168.12.247 [host down]
+Nmap scan report for 192.168.12.248 [host down]
+Nmap scan report for 192.168.12.249 [host down]
+Nmap scan report for 192.168.12.250 [host down]
+Nmap scan report for 192.168.12.251 [host down]
+Nmap scan report for 192.168.12.252 [host down]
+Nmap scan report for 192.168.12.253 [host down]
+Nmap scan report for 192.168.12.255 [host down]
+Initiating Parallel DNS resolution of 1 host. at 09:51
+Completed Parallel DNS resolution of 1 host. at 09:51, 13.00s elapsed
+Initiating SYN Stealth Scan at 09:51
+Scanning 3 hosts [1000 ports/host]
+Discovered open port 25/tcp on 192.168.12.127
+Discovered open port 22/tcp on 192.168.12.128
+Discovered open port 3306/tcp on 192.168.12.127
+Discovered open port 139/tcp on 192.168.12.128
+Discovered open port 139/tcp on 192.168.12.127
+Discovered open port 135/tcp on 192.168.12.127
+Discovered open port 21/tcp on 192.168.12.128
+Discovered open port 111/tcp on 192.168.12.128
+Discovered open port 445/tcp on 192.168.12.128
+Discovered open port 443/tcp on 192.168.12.127
+Discovered open port 21/tcp on 192.168.12.127
+Discovered open port 445/tcp on 192.168.12.127
+Discovered open port 80/tcp on 192.168.12.128
+Discovered open port 80/tcp on 192.168.12.127
+Discovered open port 2049/tcp on 192.168.12.128
+Completed SYN Stealth Scan against 192.168.12.128 in 0.29s (2 hosts left)
+Completed SYN Stealth Scan against 192.168.12.127 in 1.30s (1 host left)
+Completed SYN Stealth Scan at 09:51, 8.29s elapsed (3000 total ports)
+Initiating OS detection (try #1) against 3 hosts
+Retrying OS detection (try #2) against 192.168.12.254
+Nmap scan report for 192.168.12.127
+Host is up (0.00024s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+25/tcp   open  smtp
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+MAC Address: 00:0C:29:8E:4E:C1 (VMware)
+Device type: general purpose
+Running: Microsoft Windows XP
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_xp::sp3
+OS details: Microsoft Windows XP SP2 or SP3
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: Incremental
+
+Nmap scan report for 192.168.12.128
+Host is up (0.00094s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2049/tcp open  nfs
+MAC Address: 00:0C:29:CE:39:B3 (VMware)
+Device type: general purpose|storage-misc
+Running: Linux 2.6.X, Thecus embedded
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/h:thecus:4200 cpe:/h:thecus:n5500
+OS details: Linux 2.6.18 - 2.6.31, Thecus 4200 or N5500 NAS device (Linux 2.6.33)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=204 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 192.168.12.254
+Host is up (0.000085s latency).
+All 1000 scanned ports on 192.168.12.254 are filtered
+MAC Address: 00:50:56:FE:9D:35 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Initiating SYN Stealth Scan at 09:51
+Scanning 192.168.12.129 [1000 ports]
+Completed SYN Stealth Scan at 09:51, 0.05s elapsed (1000 total ports)
+Initiating OS detection (try #1) against 192.168.12.129
+Retrying OS detection (try #2) against 192.168.12.129
+Nmap scan report for 192.168.12.129
+Host is up (0.000032s latency).
+All 1000 scanned ports on 192.168.12.129 are closed
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+Read data files from: /usr/bin/../share/nmap
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (4 hosts up) scanned in 43.44 seconds
+           Raw packets sent: 5689 (249.332KB) | Rcvd: 4069 (169.889KB)
+                                                                                                                                                            
+┌──(root💀kali)-[/home/kali]
+└─# nmap -sT -sV 192.168.12.1/24
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-25 09:52 EST
+Stats: 0:00:20 elapsed; 252 hosts completed (3 up), 255 undergoing Host Discovery
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Nmap scan report for 192.168.12.127
+Host is up (0.00036s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          FileZilla ftpd 0.9.32 beta
+25/tcp   open  smtp         SLmail smtpd 5.5.0.4433
+80/tcp   open  http         Apache httpd 2.2.12 ((Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0)
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+443/tcp  open  ssl/https?
+445/tcp  open  microsoft-ds Microsoft Windows XP microsoft-ds
+3306/tcp open  mysql?
+MAC Address: 00:0C:29:8E:4E:C1 (VMware)
+Service Info: Host: tester-595cbae8; OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Nmap scan report for 192.168.12.128
+Host is up (0.00046s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 5.1p1 Debian 3ubuntu1 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http        Apache httpd 2.2.9 ((Ubuntu) PHP/5.2.6-2ubuntu4.6 with Suhosin-Patch)
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+2049/tcp open  nfs         2-4 (RPC #100003)
+MAC Address: 00:0C:29:CE:39:B3 (VMware)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.12.254
+Host is up (0.00014s latency).
+All 1000 scanned ports on 192.168.12.254 are filtered
+MAC Address: 00:50:56:FE:9D:35 (VMware)
+
+Nmap scan report for 192.168.12.129
+Host is up (0.00011s latency).
+All 1000 scanned ports on 192.168.12.129 are closed
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (4 hosts up) scanned in 195.91 seconds
+
+──(root💀kali)-[/home/kali]
+└─# nmap -O -sV -sC -oX /home/kali/Desktop/nmap_grupo_05.xml -- stylesheet https://nmap.org/svn/docs/nmap.xsl 192.168.12.1-254 
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-01-25 10:02 EST
+Failed to resolve "stylesheet".
+Unable to split netmask from target expression: "https://nmap.org/svn/docs/nmap.xsl"
+Nmap scan report for 192.168.12.127
+Host is up (0.00028s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          FileZilla ftpd 0.9.32 beta
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x 1 ftp ftp              0 Aug 06  2009 incoming
+|_-r--r--r-- 1 ftp ftp            187 Aug 06  2009 onefile.html
+|_ftp-bounce: bounce working!
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+25/tcp   open  smtp         SLmail smtpd 5.5.0.4433
+| smtp-commands: tester-595cbae8, SIZE 100000000, SEND, SOML, SAML, HELP, VRFY, EXPN, ETRN, XTRN, 
+|_ This server supports the following commands. HELO MAIL RCPT DATA RSET SEND SOML SAML HELP NOOP QUIT 
+80/tcp   open  http         Apache httpd 2.2.12 ((Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0)
+|_http-server-header: Apache/2.2.12 (Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0
+| http-title:             XAMPP            1.7.2        
+|_Requested resource was http://192.168.12.127/xampp/splash.php
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+443/tcp  open  ssl/https?
+| ssl-cert: Subject: commonName=localhost
+| Not valid before: 2009-04-15T22:04:42
+|_Not valid after:  2019-04-13T22:04:42
+|_ssl-date: 2021-01-25T15:06:25+00:00; 0s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|_    SSL2_RC4_128_WITH_MD5
+445/tcp  open  microsoft-ds Windows XP microsoft-ds
+3306/tcp open  mysql?
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+MAC Address: 00:0C:29:8E:4E:C1 (VMware)
+Device type: general purpose
+Running: Microsoft Windows XP
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_xp::sp3
+OS details: Microsoft Windows XP SP2 or SP3
+Network Distance: 1 hop
+Service Info: Host: tester-595cbae8; OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: 5s, deviation: 10s, median: 0s
+|_nbstat: NetBIOS name: TESTER-595CBAE8, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:8e:4e:c1 (VMware)
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: tester-595cbae8
+|   NetBIOS computer name: TESTER-595CBAE8\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-01-25T15:05:45+00:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Nmap scan report for 192.168.12.128
+Host is up (0.00076s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.12.129
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         OpenSSH 5.1p1 Debian 3ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 04:a9:f7:e1:ce:66:8c:95:ce:cd:dc:84:e2:ff:22:2c (DSA)
+|_  2048 ab:d7:b0:df:21:ab:5c:24:8b:92:fe:b2:4f:ef:9c:21 (RSA)
+80/tcp   open  http        Apache httpd 2.2.9 ((Ubuntu) PHP/5.2.6-2ubuntu4.6 with Suhosin-Patch)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.9 (Ubuntu) PHP/5.2.6-2ubuntu4.6 with Suhosin-Patch
+|_http-title: Site doesn't have a title (text/html).
+111/tcp  open  rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100005  1,2,3      36881/tcp   mountd
+|   100005  1,2,3      50230/udp   mountd
+|   100021  1,3,4      48476/udp   nlockmgr
+|   100021  1,3,4      55602/tcp   nlockmgr
+|   100024  1          34920/udp   status
+|_  100024  1          44687/tcp   status
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+2049/tcp open  nfs         2-4 (RPC #100003)
+MAC Address: 00:0C:29:CE:39:B3 (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.18 - 2.6.31
+Network Distance: 1 hop
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_nbstat: NetBIOS name: UBUNTU, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Nmap scan report for 192.168.12.254
+Host is up (0.00024s latency).
+All 1000 scanned ports on 192.168.12.254 are filtered
+MAC Address: 00:50:56:FE:9D:35 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 192.168.12.129
+Host is up (0.000042s latency).
+All 1000 scanned ports on 192.168.12.129 are closed
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+Post-scan script results:
+| clock-skew: 
+|   5s: 
+|     192.168.12.127
+|_    192.168.12.128
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 254 IP addresses (4 hosts up) scanned in 283.66 seconds
+

@@ -1,0 +1,5 @@
+﻿  engine.cpp
+C:\Users\jlp_a\Desktop\CG-TP4\Engine\engine.cpp(446,15): warning C4101: 'cG': unreferenced local variable
+C:\Users\jlp_a\Desktop\CG-TP4\Engine\engine.cpp(446,11): warning C4101: 'cR': unreferenced local variable
+C:\Users\jlp_a\Desktop\CG-TP4\Engine\engine.cpp(446,19): warning C4101: 'cB': unreferenced local variable
+  CG-TP4.vcxproj -> C:\Users\jlp_a\Desktop\CG-TP4\build\Release\CG-TP4.exe

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/joao_/OneDrive/Ambiente%20de%20Trabalho/DAW2020/pr.dtd">
+<pr>
+    <meta>
+        <key>MIEI_DAW20/21_TPC5</key>
+        <title>ToDo List</title>
+        <bdate>18/11/2020</bdate>
+        <edate>25/11/2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="A74806">
+            <name>João Amorim</name>
+            <email>a74806@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Neste TPC era pedida a criação de um Task Manager aka ToDo List que permitisse a criação, edição e remoção
+            de tarefas que o utilizador pretenda realizar/planear.
+        </p>
+        <p> Cada tarefa é composta pelo ID, utilizado para diferentes operações necessárias ao bom funcionamento da 
+            aplicação, pelo nome, descrição, data de criação, data limite para realização da tarefa, a quem a tarefa
+            diz respeito e o tipo da tarefa, ou seja, se já está feita ou se ainda está por realizar.
+        </p>
+        <p> Em primeiro lugar, foi preciso garantir, tal como pedido, a criação de uma SPA, em que o formulário para 
+            criação de uma tarefa, assim como a lista de tarefas incompletas e a lista de tarefas completas estaria toda 
+            na mesma página. 
+        </p>
+        <p> Depois de atingido o ponto em cima, era agora necessário garantir que as funcionalidades de edit/delete das
+            tarefas estava funcional. Apesar de esta ter sido a parte mais dificil, os apontamentos fornecidos pelo Professor
+            durante a aula dão quase todo o caminho para garantir a sua resolução.
+        </p>
+ 
+    </abstract>
+    <deliverables>
+        <link url="">Node.js Server</link>
+        <link url="">Db.js</link>
+    </deliverables>
+</pr>

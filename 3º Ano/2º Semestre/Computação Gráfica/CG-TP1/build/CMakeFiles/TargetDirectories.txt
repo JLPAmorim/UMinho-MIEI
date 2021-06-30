@@ -1,0 +1,4 @@
+C:/Users/jlp_a/Desktop/CG/CG-TP1/build/CMakeFiles/generator.dir
+C:/Users/jlp_a/Desktop/CG/CG-TP1/build/CMakeFiles/CG-TP1.dir
+C:/Users/jlp_a/Desktop/CG/CG-TP1/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/jlp_a/Desktop/CG/CG-TP1/build/CMakeFiles/ZERO_CHECK.dir

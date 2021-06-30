@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/joao_/OneDrive/Ambiente%20de%20Trabalho/DAW2020/pr.dtd">
+<pr>
+    <meta>
+        <key>MIEI_DAW20/21_TPC3</key>
+        <title>Arqueossitios do NW Português</title>
+        <bdate>28/11/2020</bdate>
+        <edate>04/11/2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="A74806">
+            <name>João Amorim</name>
+            <email>a74806@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Neste TPC era pedida a criação de uma página HTML que possuísse os indíces para cada 
+         Arqueossítio presente no ficheiro XML fornecido. Cada um destes indíces teria então que
+         redirecionar o utilizador para uma outra página HTML que contivesse a informação do
+         respectivo Arqueossítio. Era também requisito a criação de um ficheiro DTD sobre o já
+         mencionado ficheiro XML.
+        </p>
+        <p>Uma vez que não me foi possível assistir à aula em que se abordou este TPC e a mesma não foi 
+         gravada, utilizei como guia o que era pedido na Blackboard e acabei inicialmente por criar apenas
+         uma página web através do uso de um ficheiro XSLT que dividisse cada Arqueossítio apresentando
+         as suas respetivas informações.
+        </p>
+        <p>Através da aula do dia 04/11 apercebi-me que o que tinha feito estava incorreto e por isso mesmo 
+         decidi voltar a refazer o TPC de modo a que correspondesse ao pedido. Desta vez, foi então
+         criada uma página principal "index.html" que contivesse os indices de todos os Arqueossítios,
+         ordenados alfabeticamente por Identificação. Foi então atribuída uma hiperligação a cada indice
+         que redirecionaria o utilizador, para a respetiva página do Arqueossítio já previamente criada.
+         A parir destas páginas individuais, é também possível reverter para a página principal contendo
+         todos os índices.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="">XML DTD</link>
+        <link url="">XML Document</link>
+        <link url="">XSLT Stylesheet</link>
+    </deliverables>
+</pr>

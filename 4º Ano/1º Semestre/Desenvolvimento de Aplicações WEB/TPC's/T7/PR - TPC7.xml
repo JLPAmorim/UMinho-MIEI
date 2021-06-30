@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/joao_/OneDrive/Ambiente%20de%20Trabalho/DAW2020/pr.dtd">
+<pr>
+    <meta>
+        <key>MIEI_DAW20/21_TPC7</key>
+        <title>ToDo List</title>
+        <bdate>25/11/2020</bdate>
+        <edate>08/12/2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="A74806">
+            <name>João Amorim</name>
+            <email>a74806@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Neste TPC era pedido a elaboração de uma aplicação  com um servidor que respondesse a pedidos sobre uma base 
+            de dados em Mongo contendo informações sobre os alunos inscritos em DAW2020</p> 
+        <p>Os objetivos desta aplicação são os de listar, registar, editar e eliminar as informações individuais 
+            relativas a um aluno.
+        </p>
+        <p>Trabalho entregue com 5 dias de atraso.
+        </p>
+ 
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/Lynqen/DAW2020/tree/main/T7/dawApp">DawApp</link>
+        <link url="https://github.com/Lynqen/DAW2020/blob/main/T7/PR%20-%20TPC7.xml">Project Record</link>
+    </deliverables>
+</pr>

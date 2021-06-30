@@ -1,0 +1,94 @@
+{
+  "tasks": [
+    {
+      "id": "2",
+      "name": "Limpeza",
+      "desc": "Limpar a garagem e os arrumos",
+      "cdate": "24-11-2020",
+      "ddate": "25-11-2020",
+      "who": "António Miranda",
+      "type": "Incomplete"
+    },
+    {
+      "id": "3",
+      "name": "Cortar a Relva",
+      "desc": "Cortar a relva do jardim da frente",
+      "cdate": "24-11-2020",
+      "ddate": "25-11-2020",
+      "who": "Ana Margarida",
+      "type": "Complete"
+    },
+    {
+      "id": "4",
+      "name": "Lavar a Roupa",
+      "desc": "Lavar toda a roupa de cor branca",
+      "cdate": "14-11-2020",
+      "ddate": "15-12-2020",
+      "who": "Rui Costa",
+      "type": "Complete"
+    },
+    {
+      "id": "1",
+      "name": "Filhos",
+      "desc": "Levar os filhos à escola durante a próxima semana",
+      "cdate": "23-11-2020",
+      "ddate": "28-11-2020",
+      "who": "Mom",
+      "type": "Incomplete"
+    },
+    {
+      "id": "5",
+      "name": "Arrumar",
+      "desc": "Arrumar o quarto e a sala",
+      "cdate": "14-11-2020",
+      "ddate": "15-11-2020",
+      "who": "João Luís",
+      "type": "Complete"
+    },
+    {
+      "id": "6",
+      "name": "TPC6 DAW",
+      "desc": "Fazer o TPC6 de DAW para a próxima semana",
+      "cdate": "18-11-2020",
+      "ddate": "25-11-2020",
+      "who": "João Luís",
+      "type": "Incomplete"
+    },
+    {
+      "id": "8",
+      "name": "Lavar Carros",
+      "desc": "Lavar o carro e a carrinha por dentro e por fora",
+      "cdate": "01-11-2020",
+      "ddate": "15-11-2020",
+      "who": "José Henriques",
+      "type": "Incomplete"
+    },
+    {
+      "id": "7",
+      "name": "Cãos ao Veterinário",
+      "desc": "Levar os cães ao veterinário para desparasitação",
+      "cdate": "13-11-2020",
+      "ddate": "20-11-2020",
+      "who": "Pedro Manuel",
+      "type": "Complete"
+    },
+    {
+      "id": "9",
+      "name": "Enviar Correio",
+      "desc": "Enviar caixa de brinquedos pelo correio",
+      "cdate": "24-11-2020",
+      "ddate": "25-11-2020",
+      "who": "Maria Costa",
+      "type": "Complete"
+    },
+    {
+      "id": "10",
+      "name": "Levar o lixo",
+      "desc": "Levar o lixo lá fora durante este mês",
+      "cdate": "01-11-2020",
+      "ddate": "30-11-2020",
+      "who": "Marcelo Rebelo de Sousa",
+      "type": "Incomplete"
+    }
+  ]
+}

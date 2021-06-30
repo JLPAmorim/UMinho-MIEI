@@ -1,0 +1,3 @@
+﻿  engine.cpp
+C:\Users\jlp_a\Desktop\CG-TP3\Engine\engine.cpp(82,23): warning C4018: '<': signed/unsigned mismatch
+  CG-TP3.vcxproj -> C:\Users\jlp_a\Desktop\CG-TP3\build\Release\CG-TP3.exe

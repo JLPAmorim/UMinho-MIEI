@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/joao_/OneDrive/Ambiente%20de%20Trabalho/DAW2020/pr.dtd">
+<pr>
+    <meta>
+        <key>MIEI_DAW20/21_TPC4</key>
+        <title>Json-Server: Escola de Música</title>
+        <bdate>11/11/2020</bdate>
+        <edate>18/11/2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="A74806">
+            <name>João Amorim</name>
+            <email>a74806@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Neste TPC era pedida  a utilização de um json-server para a criação de uma API REST de teste sobre um 
+            ficheiro json, sendo neste caso um dataset sobre uma Escole de Música, que permitisse a comunicação
+            com uma outra aplicação para a criação de várias páginas HTML. Esta aplicação corresponde a um outro 
+            servidor cujo objetivo seria o de realizar pedidos GET para a obtenção e tratamento de informação sobre 
+            a já mencionada Escola.
+        </p>
+        <p> Esta Escola de Música é composta por alunos, contendo o seu id, nome, data de nascimento, código do 
+            curso, ano do curso e instrumento, por cursos contendo o id do curso, a sua designação, duração e 
+            respetivo instrumento e finalmente por instrumento com o seu id e nome.
+        </p>
+        <p> Para a realização do trabalho, nomeadamente a criação do servidor, é utilizada a ferramenta axios
+            que permite a realização dos pedidos GET. Estes pedidos são realizados ao json-server que já deverá 
+            estar a correr com a utilização do comando "json-server --watch db.json -p 3001", atribuindo a porta
+            3001. Neste pedido GET e tendo em conta que a porta para o servidor json corresponde à 3001, 
+            deve ser sempre passado como parâmetro o url sobre o qual pretendemos obter os dados, não esqueçendo
+            o protocolo. No caso, por exemplo, dos alunos este url corresponderia a "http://localhost:3001/alunos".         
+        </p>
+        <p> Com toda a estrutura do servidor definida, era então necessário criar as págiinas HTML pretendidas,
+            ou seja, uma página principal com um indíce com Listas de Alunos, Cursos e Instrumentos, com ligações 
+            para páginas com essas mesmas listas. Estas novas páginas teriam ainda que conter ligações para uma nova 
+            página que contivesse então a informação individual sobre cada objeto.
+        </p>
+        <p> Neste TPC, a grande dificuldade foi sem dúvida descobrir uma maneira de verificar e validar o url para
+            um aluno/curso/instrumento em específico, uma vez que este url seria diferente para cada um, consoante o seu id.
+            A solução encontrada assentou no uso de Expressões Regulares, em que por exemplo para Alunos, o url teria 
+            que dar match à ER /alunos\/A[1-9a-zA-Z\_\-]+/, garantindo que o URL seria da forma /alunos/AX em que X corresponde a 
+            um ou mais digitos, letras, '-' ou '_'. Depois de construída toda a lógica do programa em relação a quando é que deveria
+            entrar em cada condição, tudo o resto corresponde à escrita e criação das páginas HTML.
+ 
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="">Node.js Server</link>
+        <link url="">Db.js</link>
+    </deliverables>
+</pr>

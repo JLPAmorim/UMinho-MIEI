@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=SemAutorizacaoException
+comment0.text=\r\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ SemAutorizacaoException\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\r\n
+comment1.params=
+comment1.target=SemAutorizacaoException()
+comment2.params=message
+comment2.target=SemAutorizacaoException(java.lang.String)
+comment3.params=message\ cause
+comment3.target=SemAutorizacaoException(java.lang.String,\ java.lang.Throwable)
+comment4.params=cause
+comment4.target=SemAutorizacaoException(java.lang.Throwable)
+numComments=5
