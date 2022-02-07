@@ -1,0 +1,159 @@
+[
+    {
+        "id": "PTEINSBDSQL001",
+        "language": "pt",
+        "study_cycle": "Ensino Superior",
+        "scholarity": "Engenharia Informática",
+        "domain": "Sistemas de Bases de Dados",
+        "subdomain": "SQL",
+        "subsubdomain": "",
+        "difficulty_level": "1",
+        "author": "Orlando Belo",
+        "display_mode": "G",
+        "answering_time": "60",
+        "type": "",
+        "precedence": [],
+        "repetitions": "0",
+        "header": "A SQL é uma linguagem utilizada em programação concebida especificamente para a descrição, manipulação e controlo de dados num sistema de bases de dados relacional. Esta afirmação é:",
+    "body": [
+            {
+                "answer": "Verdadeira.",
+                "correction": "1",
+                "mandatory": "1",
+                "eliminative": "0",
+                "points": "1"
+            },
+            {
+                "answer": "Falsa.",
+                "correction": "0",
+                "mandatory": "1",
+                "eliminative": "0",
+                "points": "0"
+            }
+        ],
+        "explanation": "",
+        "images": "",
+        "videos": "",
+        "source": "Belo, O., Cadernos de Problemas - Sistemas de Bases de Dados, Departamento de Informática, Escola de Engenharia, Universidade do Minho, 2021",
+        "notes": "Para utilização exclusiva da plataforma educacional Leonardo",
+        "status": "E",
+        "inserted_by": "Belo, O",
+        "inserted_at": "2021-01-31",
+        "validated_by": "",
+        "validated_at": ""
+    },
+    {
+        "id": "PTEINSBDSQL002",
+        "language": "pt",
+        "study_cycle": "Ensino Superior",
+        "scholarity": "Engenharia Informática",
+        "domain": "Sistemas de Bases de Dados",
+        "subdomain": "SQL",
+        "subsubdomain": "",
+        "difficulty_level": "1",
+        "author": "Orlando Belo",
+        "display_mode": "G",
+        "answering_time": "60",
+        "type": "",
+        "precedence": [],
+        "repetitions": "0",
+        "header": "A SQL foi definida como um padrão (standard) pela American National Standards Institute (ANSI) em 1976, e pela International Organization for Standardization (ISO) in 1987. Esta afirmação é:",
+    "body": [
+            {
+                "answer": "Verdadeira.",
+                "correction": "0",
+                "mandatory": "1",
+                "eliminative": "0",
+                "points": "0"
+            },
+            {
+                "answer": "Falsa.",
+                "correction": "1",
+                "mandatory": "1",
+                "eliminative": "0",
+                "points": "1"
+            }
+        ],
+        "explanation": "",
+        "images": "",
+        "videos": "",
+        "source": "Belo, O., Cadernos de Problemas - Sistemas de Bases de Dados, Departamento de Informática, Escola de Engenharia, Universidade do Minho, 2021",
+        "notes": "Para utilização exclusiva da plataforma educacional Leonardo",
+        "status": "E",
+        "inserted_by": "Belo, O",
+        "inserted_at": "2021-01-31",
+        "validated_by": "",
+        "validated_at": ""
+    },
+    {
+        "id": "PTEINSBDSQL003",
+        "language": "pt",
+        "study_cycle": "Ensino Superior",
+        "scholarity": "Engenharia Informática",
+        "domain": "Sistemas de Bases de Dados",
+        "subdomain": "SQL",
+        "subsubdomain": "",
+        "difficulty_level": "1",
+        "author": "Orlando Belo",
+        "display_mode": "G",
+        "answering_time": "60",
+        "type": "",
+        "precedence": [],
+        "repetitions": "0",
+        "header": "Como é que poderemos tornar mais clara e compreensível a escrita de instruções SQL?",
+        "body": [
+            {
+                "answer": "Escrevendo todas as instruções SQL alinhadas à esquerda e separadas por mudanças de linha.",
+                "correction": "0",
+                "mandatory": "1",
+                "eliminative": "0",
+                "points": "0"
+            },
+            {
+                "answer": "Introduzindo mudanças de linha para separar cada clausula SQL, especialmente quando temos clasulas de filtragem.",
+                "correction": "0",
+                "mandatory": "0",
+                "eliminative": "0",
+                "points": "0"
+            },
+            {
+                "answer": "Utilizando uma abordagem combinada de identação e de lineação.",
+                "correction": "1",
+                "mandatory": "1",
+                "eliminative": "0",
+                "points": "1"
+            },
+            {
+                "answer": "Escrevendo todas as clausula de uma instrução numa só linha.",
+                "correction": "0",
+                "mandatory": "0",
+                "eliminative": "0",
+                "points": "0"
+            },
+            {
+                "answer": "Separando as diversas clauslas SQL com tabs e as principais isntruções com mudanças de linha.",
+                "correction": "0",
+                "mandatory": "0",
+                "eliminative": "0",
+                "points": "0"
+            },
+            {
+                "answer": "Nenhuma das anteriores.",
+                "correction": "0",
+                "mandatory": "1",
+                "eliminative": "0",
+                "points": "0"
+            }
+        ],
+        "explanation": "",
+        "images": "",
+        "videos": "",
+        "source": "Belo, O., Cadernos de Problemas - Sistemas de Bases de Dados, Departamento de Informática, Escola de Engenharia, Universidade do Minho, 2021",
+        "notes": "Para utilização exclusiva da plataforma educacional Leonardo",
+        "status": "E",
+        "inserted_by": "Belo, O",
+        "inserted_at": "2021-01-31",
+        "validated_by": "",
+        "validated_at": ""
+    }
+]
